@@ -1,0 +1,12 @@
+rtl8168-mac-eeprom utility
+
+Usage:
+
+	./rtl8168_mac_eeprom
+will generate an EEPROM backup file for all supported cards
+
+	./rtl8168_mac_eeprom -s 1:0
+will generate an EEPROM backup file for PCI slot 1:0
+
+	./rtl8168_mac_eeprom -s 1:0 -m 01:02:03:04:05:06
+will set the new mac address 01:02:03:04:05:06 to PCI slot 1:0
