@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <string.h>
+#include <limits.h>
 
 #include <pci/pci.h>
 #include <sys/fcntl.h>
