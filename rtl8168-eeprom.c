@@ -294,13 +294,13 @@ int at93c46_op_write(struct pci_dev *d, uint8_t addr, uint16_t data)
 	return 0;
 }
 
-/* endable write access */
+/* enable write access */
 int at93c46_op_ewen(struct pci_dev *d)
 {
 	return at93c46_op(d, AT93_OP_MISC, 0x30, 0);
 }
 
-/* endable write access */
+/* erase a word */
 int at93c46_op_erase(struct pci_dev *d, uint8_t addr)
 {
 	int i, rc;
@@ -317,6 +317,7 @@ int at93c46_op_erase(struct pci_dev *d, uint8_t addr)
 		//rc = rtlspi_xceive_bit(d, 0);
 		if (rc == 1)
 			break;
+		rtlspi_delay();
 	}
 	rtlspi_pin_set(d, RTLSPI_CS, 0);
 
