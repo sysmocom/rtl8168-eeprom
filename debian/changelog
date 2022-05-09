@@ -1,0 +1,5 @@
+rtl8168-eeprom (1.0.0) unstable; urgency=medium
+
+  * Initial debian packaging.
+
+ -- Oliver Smith <osmith@sysmocom.de>  Mon, 09 May 2022 16:28:19 +0200

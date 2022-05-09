@@ -1,0 +1,14 @@
+Source: rtl8168-eeprom
+Section: devel
+Priority: optional
+Maintainer: Oliver Smith <osmith@sysmocom.de>
+Standards-Version: 4.5.0
+Build-Depends: debhelper (>= 10),
+	gcc,
+	libpci-dev,
+	pkg-config
+Homepage: https://gitea.sysmocom.de/sysmocom/rtl8168-eeprom
+
+Package: rtl8168-eeprom
+Architecture: any
+Description: Tool to set MAC address in EEPROM of RTL8168/8111E devices
