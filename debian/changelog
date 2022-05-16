@@ -1,3 +1,9 @@
+rtl8168-eeprom (1.0.2) unstable; urgency=medium
+
+  * Query PCI_FILL_{BASES,SIZES} in pci_fill_info too
+
+ -- Oliver Smith <osmith@sysmocom.de>  Mon, 16 May 2022 14:05:15 +0200
+
 rtl8168-eeprom (1.0.1) unstable; urgency=medium
 
   * Fix missing pci_fill_info()
