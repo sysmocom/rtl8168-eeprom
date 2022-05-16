@@ -498,6 +498,8 @@ static void iterate_devices(struct pci_access *pa, char *filter_id, char *filter
 		if (new_mac)
 			exit(0);
 	}
+
+	die("no matching device found!\n");
 }
 
 int main(int argc, char **argv)
