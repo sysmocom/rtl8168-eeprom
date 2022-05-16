@@ -466,6 +466,7 @@ static void iterate_devices(struct pci_access *pa, char *filter_id, char *filter
 			continue;
 
 		/* our own clumsy implementation of filtering */
+		pci_fill_info(p, PCI_FILL_IDENT | PCI_FILL_BASES | PCI_FILL_SIZES);
 		if (p->vendor_id != 0x10ec || p->device_id != 0x8168)
 			continue;
 
@@ -497,6 +498,8 @@ static void iterate_devices(struct pci_access *pa, char *filter_id, char *filter
 		if (new_mac)
 			exit(0);
 	}
+
+	die("no matching device found!\n");
 }
 
 int main(int argc, char **argv)
